@@ -1,10 +1,19 @@
 from pydantic import BaseModel
 
 
-class Item(BaseModel):
-    """Contract for item."""
+class Pizzeria(BaseModel):
+    """Pizzeria description"""
 
+    name:  str
+    city:  str
+    steet: str
+
+
+class Order(BaseModel):
+    """Pizza description"""
+
+    pizzeria: Pizzeria
     name: str
-    description: str | None = None
+    
     price: float
-    tax: float | None = None
+    account_id: int
