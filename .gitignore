@@ -1,0 +1,4 @@
+builds
+venv
+.pytest_cache
+.idea
