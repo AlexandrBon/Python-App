@@ -1,0 +1,18 @@
+// service.proto
+syntax = "proto3";
+
+message Null {}
+
+message Summa {
+  int64 sum = 1;
+}
+
+message Numbers {
+  int64 a = 1;
+  int64 b = 2;
+}
+
+service TestService {
+  rpc Health(Null) returns (Null);
+  rpc calcSum(Numbers) returns (Summa);
+}
