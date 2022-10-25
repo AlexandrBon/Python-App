@@ -2,3 +2,5 @@ builds
 venv
 .pytest_cache
 .idea
+.pycache
+__pycache__
